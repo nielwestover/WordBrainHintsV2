@@ -57,7 +57,9 @@ public class PackActivity extends ListActivity {
 
         app.curLevelInPack = position;
 
+
         startActivity(new Intent(this, HintsActivity.class));
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
     }
 
 }

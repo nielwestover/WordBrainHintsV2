@@ -13,7 +13,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HintsActivity extends AppCompatActivity {
+public class HintsActivity extends Activity {
 
     MyApplication app = null;
 
@@ -21,17 +21,17 @@ public class HintsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.hint_layout);
+        setContentView(new HintsView(this));
+        //getActionBar().hide();
         // my_child_toolbar is defined in the layout file
 
-        app = ((MyApplication) this.getApplication());
-        TextView textView = (TextView) findViewById(R.id.hints);
-        //List<Integer> seq = makeSequence(0, app.curAnimalPack.answers.size() - 1);
-        for (String answer : app.curAnimalPack.answers.get(app.curLevelInPack)){
-            textView.setText(textView.getText() + answer  + "\r\n");
-        }
+//        app = ((MyApplication) this.getApplication());
+//        TextView textView = (TextView) findViewById(R.id.hints);
+//        //List<Integer> seq = makeSequence(0, app.curAnimalPack.answers.size() - 1);
+//        for (String answer : app.curAnimalPack.answers.get(app.curLevelInPack)){
+//            textView.setText(textView.getText() + answer  + "\r\n");
+//        }
     }
-
 
     @Override
     public void onBackPressed() {
