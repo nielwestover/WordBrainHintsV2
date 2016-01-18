@@ -2,7 +2,9 @@ package com.example.a2558.myapplication;
 
 import android.app.Activity;
 import android.app.ListActivity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -13,24 +15,32 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class HintsActivity extends Activity {
 
     MyApplication app = null;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(new HintsView(this));
-        //getActionBar().hide();
-        // my_child_toolbar is defined in the layout file
+        setContentView(R.layout.hint_layout);
 
-//        app = ((MyApplication) this.getApplication());
-//        TextView textView = (TextView) findViewById(R.id.hints);
-//        //List<Integer> seq = makeSequence(0, app.curAnimalPack.answers.size() - 1);
-//        for (String answer : app.curAnimalPack.answers.get(app.curLevelInPack)){
-//            textView.setText(textView.getText() + answer  + "\r\n");
-//        }
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        ListView listView = (ListView) findViewById(R.id.hintList);
+        app = ((MyApplication) this.getApplication());
+        List<String> answers = app.curAnimalPack.answers.get(app.curLevelInPack);
+        List<Answer> singleAnswers = new ArrayList<Answer>();
+        for (String str : answers){
+            Answer v = new Answer();
+            v.answer = str;
+            singleAnswers.add(v);
+        }
+        CustomAdapter adapter = new CustomAdapter(this, singleAnswers);
+        listView.setAdapter(adapter);
     }
 
     @Override

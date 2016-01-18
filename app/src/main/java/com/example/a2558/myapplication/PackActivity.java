@@ -2,6 +2,7 @@ package com.example.a2558.myapplication;
 
 import android.app.ListActivity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
 import android.view.View;
@@ -20,6 +21,7 @@ public class PackActivity extends ListActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pack_activity);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         // my_child_toolbar is defined in the layout file
 
         app = ((MyApplication) this.getApplication());
