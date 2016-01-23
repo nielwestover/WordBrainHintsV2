@@ -20,7 +20,9 @@ public class DeviceDimensionsHelper {
 
   // DeviceDimensionsHelper.convertDpToPixel(25f, context) => (25dp converted to pixels)
   public static float convertDpToPixel(float dp, Context context){
+
       Resources r = context.getResources();
+      //return dp * r.getDisplayMetrics().density;
       return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics());
   }
 

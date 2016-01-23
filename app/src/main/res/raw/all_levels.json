@@ -1,7 +1,7 @@
 [
   {
-    "level":"Ant",
-    "answers":[
+    "level": "Ant",
+    "answers": [
       [
         "Salt"
       ],
@@ -35,8 +35,8 @@
     ]
   },
   {
-    "level":"Spider",
-    "answers":[
+    "level": "Spider",
+    "answers": [
       [
         "Oval"
       ],
@@ -70,8 +70,8 @@
     ]
   },
   {
-    "level":"Snail",
-    "answers":[
+    "level": "Snail",
+    "answers": [
       [
         "Slide",
         "Doll"
@@ -155,8 +155,8 @@
     ]
   },
   {
-    "level":"Crab",
-    "answers":[
+    "level": "Crab",
+    "answers": [
       [
         "Roof",
         "Field"
@@ -240,8 +240,8 @@
     ]
   },
   {
-    "level":"Frog",
-    "answers":[
+    "level": "Frog",
+    "answers": [
       [
         "Barn",
         "Slide"
@@ -325,8 +325,8 @@
     ]
   },
   {
-    "level":"Turtle",
-    "answers":[
+    "level": "Turtle",
+    "answers": [
       [
         "Heart",
         "Dice"
@@ -410,8 +410,8 @@
     ]
   },
   {
-    "level":"Penguin",
-    "answers":[
+    "level": "Penguin",
+    "answers": [
       [
         "Table",
         "Record",
@@ -518,8 +518,8 @@
     ]
   },
   {
-    "level":"Snake",
-    "answers":[
+    "level": "Snake",
+    "answers": [
       [
         "Elk",
         "Cow",
@@ -625,8 +625,8 @@
     ]
   },
   {
-    "level":"Rat",
-    "answers":[
+    "level": "Rat",
+    "answers": [
       [
         "Doorbell",
         "Small",
@@ -731,8 +731,8 @@
     ]
   },
   {
-    "level":"Sheep",
-    "answers":[
+    "level": "Sheep",
+    "answers": [
       [
         "Jam",
         "Cannon",
@@ -838,8 +838,8 @@
     ]
   },
   {
-    "level":"Shark",
-    "answers":[
+    "level": "Shark",
+    "answers": [
       [
         "Lapel",
         "Bathroom",
@@ -944,8 +944,8 @@
     ]
   },
   {
-    "level":"Cat",
-    "answers":[
+    "level": "Cat",
+    "answers": [
       [
         "Magnet",
         "Egg",
@@ -1053,8 +1053,8 @@
     ]
   },
   {
-    "level":"Elephant",
-    "answers":[
+    "level": "Elephant",
+    "answers": [
       [
         "Patch",
         "Ask",
@@ -1192,8 +1192,8 @@
     ]
   },
   {
-    "level":"Whale",
-    "answers":[
+    "level": "Whale",
+    "answers": [
       [
         "Igloo",
         "Paddle",
@@ -1329,8 +1329,8 @@
     ]
   },
   {
-    "level":"Octopus",
-    "answers":[
+    "level": "Octopus",
+    "answers": [
       [
         "Mouse",
         "Divide",
@@ -1345,7 +1345,7 @@
         "Sword"
       ],
       [
-        "Earth",
+        "Idea",
         "Cup",
         "Ghost",
         "Earth",
@@ -1379,7 +1379,7 @@
       ],
       [
         "Dustbin",
-        "Poscard",
+        "Postcard",
         "Planet",
         "Down"
       ],
@@ -1447,7 +1447,7 @@
         "Missile",
         "Doctor",
         "Sad",
-        "Comba",
+        "Comb",
         "Right"
       ],
       [
@@ -1466,8 +1466,8 @@
     ]
   },
   {
-    "level":"Pig",
-    "answers":[
+    "level": "Pig",
+    "answers": [
       [
         "ASK",
         "BONE",
@@ -1507,7 +1507,7 @@
         "SQUARE",
         "FLOOR",
         "GUN",
-        "HOUT"
+        "SHOUT"
       ],
       [
         "GLOVES",
@@ -1565,6 +1565,7 @@
       ],
       [
         "SCARF",
+        "PEN",
         "STINGER",
         "HELMET",
         "SOFA"
@@ -1598,13 +1599,15 @@
       ],
       [
         "STINGER",
-        "QUESTION"
+        "QUESTION",
+        "LEFT",
+        "BUTTER"
       ]
     ]
   },
   {
-    "level":"Lion",
-    "answers":[
+    "level": "Lion",
+    "answers": [
       [
         "LANTERN",
         "PADLOCK",
@@ -1621,11 +1624,12 @@
       [
         "STRAW",
         "SMELL",
+        "CLAM",
         "CAMERA",
         "BALLS"
       ],
       [
-        "SAFF",
+        "SAFE",
         "MOON",
         "SHOVEL",
         "RECORD",
@@ -1730,7 +1734,7 @@
         "CHEEK",
         "SAIL",
         "PLATE",
-        "BALLE"
+        "BALLS"
       ],
       [
         "DOORBELL",
@@ -1742,8 +1746,8 @@
     ]
   },
   {
-    "level":"Squirrel",
-    "answers":[
+    "level": "Squirrel",
+    "answers": [
       [
         "LAWN",
         "KEY",
@@ -1880,8 +1884,8 @@
     ]
   },
   {
-    "level":"Owl",
-    "answers":[
+    "level": "Owl",
+    "answers": [
       [
         "BUTTER",
         "ICEBERG",
@@ -1896,7 +1900,7 @@
         "PIPE",
         "DOG",
         "THIN",
-        "CUCTOMER",
+        "CUSTOMER",
         "PANTIES"
       ],
       [
@@ -2062,8 +2066,8 @@
     ]
   },
   {
-    "level":"Monkey",
-    "answers":[
+    "level": "Monkey",
+    "answers": [
       [
         "Crab",
         "Padlock",
@@ -2240,8 +2244,8 @@
     ]
   },
   {
-    "level":"Student",
-    "answers":[
+    "level": "Student",
+    "answers": [
       [
         "Teapot",
         "icicle",
@@ -2413,8 +2417,8 @@
     ]
   },
   {
-    "level":"Clown",
-    "answers":[
+    "level": "Clown",
+    "answers": [
       [
         "Toaster",
         "Zipper",
@@ -2453,7 +2457,7 @@
         "Arrow"
       ],
       [
-        "Soap",
+        "Soup",
         "Apple",
         "Bedroom",
         "Eyeball",
@@ -2594,8 +2598,8 @@
     ]
   },
   {
-    "level":"Waiter",
-    "answers":[
+    "level": "Waiter",
+    "answers": [
       [
         "Mittens",
         "Center",
@@ -2745,7 +2749,7 @@
         "Necktie"
       ],
       [
-        "Ball",
+        "Bald",
         "Suitcase",
         "Door",
         "Sword",
@@ -2773,8 +2777,8 @@
     ]
   },
   {
-    "level":"Policemen",
-    "answers":[
+    "level": "Policeman",
+    "answers": [
       [
         "Picture",
         "Bedroom",
@@ -2809,7 +2813,7 @@
       ],
       [
         "Cabbage",
-        "Fear",
+        "Pear",
         "Lamp",
         "Joker",
         "Robot",
@@ -2949,8 +2953,8 @@
     ]
   },
   {
-    "level":"Chef",
-    "answers":[
+    "level": "Chef",
+    "answers": [
       [
         "Sink",
         "Paddle",
@@ -3029,7 +3033,8 @@
         "Smoke",
         "Trowel",
         "Crab",
-        "Spot"
+        "Spot",
+        "Bald"
       ],
       [
         "Barrel",
@@ -3045,7 +3050,7 @@
         "Trowel",
         "Window",
         "Panties",
-        "Come",
+        "Comb",
         "Drip",
         "Wheel"
       ],
@@ -3110,7 +3115,7 @@
       [
         "Butcher",
         "Crow",
-        "Deer",
+        "Deep",
         "Lawn",
         "Duck",
         "Bee",
@@ -3129,8 +3134,8 @@
     ]
   },
   {
-    "level":"Teacher",
-    "answers":[
+    "level": "Teacher",
+    "answers": [
       [
         "Monster",
         "Mast",
@@ -3200,7 +3205,7 @@
       ],
       [
         "Necklace",
-        "DART",
+        "Dart",
         "Plate",
         "Elephant",
         "Eraser",
@@ -3295,8 +3300,8 @@
         "Hen",
         "Dentist",
         "Church",
-        "smile",
-        "suitcase"
+        "Smile",
+        "Suitcase"
       ],
       [
         "Necklace",
@@ -3354,8 +3359,8 @@
     ]
   },
   {
-    "level":"Doctor",
-    "answers":[
+    "level": "Doctor",
+    "answers": [
       [
         "Palm",
         "Nose",
@@ -3554,7 +3559,8 @@
         "Loop",
         "Paddle",
         "Cupboard",
-        "Mountain , Faucet"
+        "Mountain",
+        "Faucet"
       ],
       [
         "Purse",
@@ -3582,8 +3588,8 @@
     ]
   },
   {
-    "level":"Astronaut",
-    "answers":[
+    "level": "Astronaut",
+    "answers": [
       [
         "Well",
         "Percent",
@@ -3604,6 +3610,7 @@
         "Hatchet",
         "Path",
         "Bullet",
+        "Cherry",
         "Beard"
       ],
       [
@@ -3780,7 +3787,6 @@
       [
         "Anchor",
         "Cabin",
-        "cabin",
         "Raincoat",
         "Lorry",
         "Sock",
@@ -3814,8 +3820,8 @@
     ]
   },
   {
-    "level":"Scientist",
-    "answers":[
+    "level": "Scientist",
+    "answers": [
       [
         "Jam",
         "Odd",
@@ -4040,8 +4046,8 @@
     ]
   },
   {
-    "level":"Alien",
-    "answers":[
+    "level": "Alien",
+    "answers": [
       [
         "Dynamite",
         "Rabbit",
@@ -4169,7 +4175,8 @@
         "Muscle",
         "Full",
         "Knuckle",
-        "Biscuit"
+        "Biscuit",
+        "Stairs"
       ],
       [
         "Mince",
@@ -4261,13 +4268,13 @@
         "Shower",
         "Cat",
         "Goat",
-        "Site"
+        "Bite"
       ]
     ]
   },
   {
-    "level":"Dinosaur",
-    "answers":[
+    "level": "Dinosaur",
+    "answers": [
       [
         "Pirate",
         "Odd",
@@ -4304,12 +4311,12 @@
         "Stairs",
         "Pigsty",
         "Broom",
-        "Wolf",
         "Label",
         "Feather",
-        "Doctor",
         "Candle",
-        "Biscuit"
+        "Wolf",
+        "Biscuit",
+        "Doctor"
       ],
       [
         "Birthday",
@@ -4409,7 +4416,7 @@
         "Thin",
         "Whale",
         "Crack",
-        "Glove",
+        "Globe",
         "Glue"
       ],
       [
@@ -4501,46 +4508,46 @@
         "Card"
       ],
       [
-        "Aerial",
         "Tomato",
-        "Mast",
-        "Record",
+        "Aerial",
         "Target",
-        "Skirt",
+        "Record",
         "Sausage",
+        "Skirt",
         "Blouse",
+        "Flower",
         "Doorbell",
         "Wing",
-        "Flower"
+        "Mast"
       ],
       [
+        "Tie",
         "Robot",
         "Bat",
-        "Tie",
         "Dart",
-        "Corner",
-        "Noose",
-        "Grapes",
-        "Teapot",
         "Church",
         "Melon",
         "Bee",
+        "Teapot",
         "Sheriff",
-        "Fruit"
+        "Corner",
+        "Fruit",
+        "Noose",
+        "Grapes"
       ],
       [
-        "Peace",
         "Money",
-        "Puzzle",
+        "Peace",
         "Board",
-        "Stern",
         "Turtle",
         "Butcher",
-        "Hook",
         "Chimney",
-        "Box",
         "Hatchet",
-        "Wink"
+        "Stern",
+        "Hook",
+        "Puzzle",
+        "Wink",
+        "Box"
       ],
       [
         "Lava",
@@ -4560,57 +4567,57 @@
     ]
   },
   {
-    "level":"Dragon",
-    "answers":[
+    "level": "Dragon",
+    "answers": [
       [
-        "Spray",
-        "Japan",
         "Question",
+        "Spray",
+        "Purse",
         "Roof",
         "Percent",
-        "Purse",
-        "Medicine",
+        "Japan",
         "Swing",
-        "Saw",
+        "Medicine",
         "Bread",
-        "Cane",
-        "North"
+        "Saw",
+        "North",
+        "Cane"
       ],
       [
+        "Cheek",
+        "Rifle",
+        "Necklace",
+        "Bottle",
+        "Money",
+        "Fold",
+        "Bow",
         "Clown",
         "Tomato",
         "Peace",
         "Sing",
-        "Wink",
-        "Necklace",
-        "Rifle",
-        "Cheek",
         "Bone",
-        "Bottle",
-        "Bow",
-        "Fold",
-        "Money"
+        "Wink"
       ],
       [
         "elevator",
-        "surgery",
-        "zipper",
         "tie",
         "lens",
+        "surgery",
         "cherry",
+        "zipper",
         "celery",
         "punch",
-        "customer",
         "plum",
+        "customer",
         "pancake"
       ],
       [
+        "palm",
         "tennis",
         "lorry",
         "cream",
-        "windmill",
-        "palm",
         "lighter",
+        "windmill",
         "axe",
         "brick",
         "skirt",
@@ -4620,14 +4627,14 @@
       ],
       [
         "female",
-        "candle",
-        "balloon",
-        "barn",
-        "castle",
-        "lamp",
         "egg",
+        "castle",
+        "barn",
         "kitchen",
         "right",
+        "balloon",
+        "candle",
+        "lamp",
         "cupboard",
         "socks",
         "bat"
@@ -4698,8 +4705,8 @@
         "Sock",
         "Aerial",
         "Yacht",
-        "Jug",
-        "Knuckle"
+        "Knuckle",
+        "Jug"
       ],
       [
         "Rifle",
@@ -4709,7 +4716,7 @@
         "Down",
         "Mountain",
         "Drip",
-        "Toñgue",
+        "Tongue",
         "Necklace",
         "Snowman",
         "Finger"
@@ -4717,17 +4724,17 @@
       [
         "jam",
         "golf",
-        "elbow",
         "bacon",
         "planet",
         "punch",
         "game",
         "sausage",
-        "bag",
+        "elbow",
         "turkey",
         "smile",
+        "house",
         "cannon",
-        "house"
+        "bag"
       ],
       [
         "Clam",
@@ -4846,10 +4853,11 @@
     ]
   },
   {
-    "level":"Monster",
-    "answers":[
+    "level": "Monster",
+    "answers": [
       [
         "Dream",
+        "Rifle",
         "Pillar",
         "Block",
         "Shoes",
@@ -4860,8 +4868,7 @@
         "Iron",
         "Smoke",
         "Happy",
-        "Tail",
-        "Rifle"
+        "Tail"
       ],
       [
         "Dice",
@@ -4922,32 +4929,32 @@
         "Hat"
       ],
       [
-        "Elephant",
         "Large",
-        "Picture",
+        "Elephant",
+        "Think",
         "Axe",
         "Yacht",
-        "Think",
-        "Board",
-        "Camera",
+        "Picture",
         "Knuckle",
         "Smell",
+        "Camera",
+        "Board",
         "Grass",
         "Ham"
       ],
       [
         "Pig",
-        "Bone",
         "Wing",
+        "Meat",
+        "Ferry",
+        "Bone",
         "Ladder",
+        "Crack",
         "Earring",
         "Elevator",
         "Mountain",
-        "Ball",
-        "Meat",
         "Orange",
-        "Ferry",
-        "Crack"
+        "Ball"
       ],
       [
         "Postcard",
@@ -5025,14 +5032,14 @@
         "napkin",
         "pumpkin",
         "hatchet",
+        "mail",
         "anchor",
         "crow",
         "pliers",
         "whale",
         "saddle",
         "house",
-        "sun",
-        "Mail"
+        "sun"
       ],
       [
         "Finger",
@@ -5054,13 +5061,13 @@
         "Face",
         "Horse",
         "Antenna",
-        "Skull",
-        "Robot",
-        "Left",
         "Hen",
+        "Skull",
         "Owl",
         "Cheese",
+        "Robot",
         "Arrow",
+        "Left",
         "Plum",
         "Faucet"
       ],
@@ -5080,15 +5087,17 @@
       ],
       [
         "Lantern",
-        "Earth Whistle",
-        "Question",
-        "Paddle Swing",
-        "Arm",
-        "Lava",
-        "Fin",
+        "Earth",
         "Turtle",
+        "Whistle",
+        "Lava",
         "Wolf",
-        "Funnel"
+        "Arm",
+        "Question",
+        "Fin",
+        "Funnel",
+        "Paddle",
+        "Swing"
       ],
       [
         "Multiply",
@@ -5135,14 +5144,15 @@
     ]
   },
   {
-    "level":"Robot",
-    "answers":[
+    "level": "Robot",
+    "answers": [
       [
         "Doctor",
         "Block",
         "Meadow",
         "Lollipop",
-        "Nail Chin",
+        "Nail",
+        "Chin",
         "Large",
         "Cheese",
         "Pancake",
@@ -5180,12 +5190,13 @@
       ],
       [
         "Kitten",
-        "dream potato",
+        "dream",
+        "potato",
         "right",
         "elephant",
         "funnel",
-        "gloves",
         "spinach",
+        "gloves",
         "cabin",
         "puzzle",
         "pear"
@@ -5228,7 +5239,7 @@
         "Swan",
         "Lip",
         "Flower",
-        "BARN",
+        "Barn",
         "Blouse",
         "Cherry"
       ],
@@ -5308,8 +5319,9 @@
         "Elbow",
         "Buckle",
         "Tree",
-        "Raft. Flag",
+        "Raft",
         "Hat",
+        "Flag",
         "Soup",
         "Cap",
         "Book"
@@ -5353,10 +5365,10 @@
         "Shin",
         "Skirt",
         "Golf",
-        "Ruler",
         "Cheek",
         "Sugar",
-        "Thin"
+        "Thin",
+        "Ruler"
       ],
       [
         "Lens",
@@ -5365,11 +5377,11 @@
         "Wing",
         "elk",
         "Sign",
-        "Sofa",
         "Thick",
         "Olive",
         "Umbrella",
         "Rocket",
+        "Sofa",
         "Boot",
         "Game"
       ],
@@ -5377,14 +5389,15 @@
         "Collar",
         "money",
         "chain",
-        "soap,drill",
+        "soap",
+        "eskimo",
+        "brick",
+        "drill",
         "lollipop",
         "raincoat",
         "knee",
-        "door",
-        "eskimo",
-        "brick",
-        "nail"
+        "nail",
+        "door"
       ],
       [
         "Hammer",
@@ -5421,8 +5434,8 @@
     ]
   },
   {
-    "level":"Unicorn",
-    "answers":[
+    "level": "Unicorn",
+    "answers": [
       [
         "Center",
         "Muscle",
@@ -5542,7 +5555,7 @@
         "Painter",
         "Dice",
         "Fork",
-        "Angel",
+        "Angle",
         "Record",
         "Floor",
         "Loop",
@@ -5559,8 +5572,8 @@
         "axe",
         "mail",
         "file",
-        "arrow",
         "chicken",
+        "arrow",
         "sad"
       ],
       [

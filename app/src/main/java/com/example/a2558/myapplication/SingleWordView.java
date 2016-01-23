@@ -5,27 +5,27 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.View;
 /**
  * Created by a2558 on 1/16/2016.
  */
 public class SingleWordView extends View  {
-    Paint redPaint = null;
+    Paint brownPaint = null;
     Paint blackPaint = null;
     Paint creamPaint = null;
     public SingleWordView(Context context, AttributeSet attrs){
         super(context, attrs);
 
         setWillNotDraw(false);
-        redPaint = new Paint();
-        redPaint.setAntiAlias(true);
-        redPaint.setColor(Color.parseColor("#C27C37"));
-        redPaint.setStyle(Paint.Style.STROKE);
+        brownPaint = new Paint();
+        brownPaint.setAntiAlias(true);
+        brownPaint.setColor(Color.parseColor("#BF3000"));//"#C27C37"));
+        brownPaint.setStyle(Paint.Style.STROKE);
+        brownPaint.setStrokeWidth(DeviceDimensionsHelper.convertDpToPixel(2, getContext()));
         creamPaint = new Paint();
         creamPaint.setAntiAlias(true);
-        creamPaint.setColor(Color.parseColor("#EFE8BE"));
+        creamPaint.setColor(Color.parseColor("#FFFDE3"));
         blackPaint = new Paint();
         blackPaint.setAntiAlias(true);
         blackPaint.setColor(Color.BLACK);
@@ -49,11 +49,11 @@ public class SingleWordView extends View  {
     @Override
     protected void onDraw(Canvas canvas) {
         float startX = DeviceDimensionsHelper.convertDpToPixel(5, getContext());
-        float startY = DeviceDimensionsHelper.convertDpToPixel(5, getContext());
+        float startY = DeviceDimensionsHelper.convertDpToPixel(10, getContext());
         float width = DeviceDimensionsHelper.convertDpToPixel(30, getContext());
-        float gap = DeviceDimensionsHelper.convertDpToPixel(5, getContext());
+        float gap = DeviceDimensionsHelper.convertDpToPixel(3.5f, getContext());
         float totalWidth = width + gap;
-        float rounding = DeviceDimensionsHelper.convertDpToPixel(5, getContext());
+        float rounding = DeviceDimensionsHelper.convertDpToPixel(.5f, getContext());
         float yOffset = DeviceDimensionsHelper.convertDpToPixel(21, getContext());
         for (int i = 0; i < answer.length(); ++i){
             if(i < hintsRequested) {
@@ -61,7 +61,7 @@ public class SingleWordView extends View  {
                 canvas.drawText(answer.toUpperCase().substring(i, i + 1), startX + i * totalWidth + width/2, startY + yOffset, blackPaint);
             }
             else {
-                canvas.drawPath(RoundedRect(startX + i * totalWidth, startY, startX + i * totalWidth + width, startY + width, rounding, rounding), redPaint);
+                canvas.drawPath(RoundedRect(startX + i * totalWidth, startY, startX + i * totalWidth + width, startY + width, rounding, rounding), brownPaint);
             }
         }
     }

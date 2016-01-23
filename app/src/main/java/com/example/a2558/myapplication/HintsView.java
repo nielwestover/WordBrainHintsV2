@@ -33,7 +33,7 @@ public class HintsView extends View {
 //    @Override
 //    protected void onDraw(Canvas canvas) {
 //
-//        canvas.drawPath(RoundedRect(100,100,150, 150, 10, 10), redPaint);
+//        canvas.drawPath(RoundedRect(100,100,150, 150, 10, 10), brownPaint);
 //        canvas.drawText("W", 125,125, blackPaint);
 //    }
 //

@@ -7,13 +7,16 @@
     android:layout_height="match_parent">
    <com.example.a2558.myapplication.SingleWordView
        android:layout_width="0dp"
-       android:layout_weight=".8"
-       android:layout_height="45dp"
+       android:layout_weight=".9"
+       android:layout_height="52dp"
        android:id="@+id/wordView"/>
     <Button
         android:id="@+id/getHint"
-        android:text="Hint"
+        android:text="+"
         android:layout_width="0dp"
-        android:layout_weight=".2"
-        android:layout_height="match_parent" />
+        android:layout_weight=".1"
+        android:layout_height="match_parent"
+        android:textAlignment="gravity"
+        android:textSize="25dp"
+        android:gravity="center_vertical|center|center_horizontal" />
 </LinearLayout>

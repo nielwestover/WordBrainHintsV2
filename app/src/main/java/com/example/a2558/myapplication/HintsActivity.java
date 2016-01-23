@@ -10,8 +10,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +24,7 @@ import java.util.List;
 public class HintsActivity extends Activity {
 
     MyApplication app = null;
-
+    private AdView mAdView;
 
 
     @Override
@@ -28,19 +33,39 @@ public class HintsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hint_layout);
 
+        app = ((MyApplication) this.getApplication());
+
+        mAdView = (AdView) findViewById(R.id.adView);
+
+        mAdView.loadAd(app.getAdRequest());
+
+
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        ListView listView = (ListView) findViewById(R.id.hintList);
-        app = ((MyApplication) this.getApplication());
-        List<String> answers = app.curAnimalPack.answers.get(app.curLevelInPack);
-        List<Answer> singleAnswers = new ArrayList<Answer>();
-        for (String str : answers){
-            Answer v = new Answer();
-            v.answer = str;
-            singleAnswers.add(v);
+        try {
+            ListView listView = (ListView) findViewById(R.id.hintList);
+            TextView levelName = (TextView) findViewById(R.id.levelName);
+            levelName.setText(app.curAnimalPack.level + " " + (app.curLevelInPack + 1));
+
+            List<String> answers = app.curAnimalPack.answers.get(app.curLevelInPack);
+            List<Answer> singleAnswers = new ArrayList<Answer>();
+            for (String str : answers) {
+                Answer v = new Answer();
+                v.answer = str;
+                singleAnswers.add(v);
+            }
+            CustomAdapter adapter = new CustomAdapter(this, singleAnswers);
+            listView.setAdapter(adapter);
         }
-        CustomAdapter adapter = new CustomAdapter(this, singleAnswers);
-        listView.setAdapter(adapter);
+        catch (Exception e) {
+            try {
+                app.loadAllLevels(this);
+                finish();
+                startActivity(getIntent());
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
     }
 
     @Override
@@ -50,71 +75,22 @@ public class HintsActivity extends Activity {
         overridePendingTransition(R.anim.slide_out_left, R.anim.slide_in_left);
     }
 
-//
-//    int curHint;
-//
-//    private void resetText()
-//    {
-//        TextView textHints = (TextView) findViewById(R.id.hints);
-//        textHints.setText("");
-//        curHint = 0;
-//    }
-//
-//    public void getHintClicked(View view){
-//        TextView textHints = (TextView) findViewById(R.id.hints);
-//        String result = getHint(app.curPackIndex, app.curLevelInPack - 1, curHint);
-//        int count = 0;
-//        while (result == "***TRYAGAIN***" && ++count < 10)
-//        {
-//            curHint++;
-//            result = getHint(app.curPackIndex, app.curLevelInPack - 1, curHint);
-//        }
-//        if (count == 10)
-//            return;
-//        textHints.setText(textHints.getText() + "\r\n" + result);
-//        curHint++;
-//    }
-
-//    public void advanceLevelClicked(View view){
-//        app.curLevelInPack++;
-//        if (app.curLevelInPack > app.curAnimalPack.answers.size())
-//        {
-//            if (app.curPackIndex == app.animalPacks.size()-1) {
-//                app.curLevelInPack--;
-//                return;
-//            }
-//            app.curPackIndex++;
-//            app.curLevelInPack = 1;
-//        }
-//        Spinner spinnerPackNames = (Spinner) findViewById(R.id.packNames);
-//        Spinner spinnerLevelNumber = (Spinner) findViewById(R.id.levelNumber);
-//        spinnerPackNames.setSelection(app.curPackIndex);
-//        spinnerLevelNumber.setSelection(app.curLevelInPack - 1);
-//    }
-
-
-
-    public String dashify(String s, int charNumber) {
-        StringBuilder sb = new StringBuilder(s.length());
-
-        for (int i = 0; i < charNumber; ++i)
-            sb.append(s.charAt(i));
-        for (int i = charNumber; i < s.length(); i++) {
-            sb.append('-');
+    public void advanceLevelClicked(View view){
+        app.curLevelInPack++;
+        if (app.curLevelInPack >= app.curAnimalPack.answers.size())
+        {
+            if (app.curPackIndex == app.animalPacks.size()-1) {
+                app.curLevelInPack--;
+                return;
+            }
+            app.curPackIndex++;
+            app.curAnimalPack = app.animalPacks.get(app.curPackIndex);
+            app.curLevelInPack = 0;
         }
-        return sb.toString();
+        finish();
+        startActivity(getIntent());
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
     }
-    private String getHint(int packIndex, int levelNumber, int hintNumber){
 
-        List<String> answers = app.curAnimalPack.answers.get(levelNumber);
-        int wordNumber = hintNumber % answers.size();
-        int charNumber = hintNumber / answers.size() + 1;
-
-        String word = answers.get(wordNumber);
-        if (charNumber > word.length()) {
-            return "***TRYAGAIN***";
-        }
-        return dashify(word, charNumber);
-    }
 
 }
