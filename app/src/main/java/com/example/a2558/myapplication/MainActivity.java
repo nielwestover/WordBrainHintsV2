@@ -37,20 +37,15 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         app = ((MyApplication) this.getApplication());
 
-        try {
-            app.loadAllLevels(this);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         ListView listView = (ListView) findViewById(R.id.animalList);
-        ArrayAdapter<AnimalPack> adapter = new ArrayAdapter<AnimalPack>(this, R.layout.row_layout, R.id.textView, app.animalPacks);
+        ArrayAdapter<AnimalPack> adapter = new ArrayAdapter<AnimalPack>(this, R.layout.row_layout, R.id.textView, app.animalPacks());
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                app.curAnimalPack = (AnimalPack) app.animalPacks.get(position);
+                app.curAnimalPack = (AnimalPack) app.animalPacks().get(position);
                 app.curPackIndex = position;
                 app.curLevelInPack = 0;
 

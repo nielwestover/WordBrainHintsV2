@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,16 +26,27 @@ public class PackActivity extends ListActivity {
         // my_child_toolbar is defined in the layout file
 
         app = ((MyApplication) this.getApplication());
-
+        app.lastChosenPackIndex = app.curPackIndex;
         Intent intent = getIntent();
         //List<Integer> listValues = new ArrayList<Integer>();
-        List<Integer> seq = makeSequence(0, app.curAnimalPack.answers.size() - 1);
-        List<String> levels = new ArrayList<String>();
-        for (int i : seq) {
-            levels.add("Level " + i);
+
+            List<Integer> seq = makeSequence(0, app.curAnimalPack.answers.size() - 1);
+            List<String> levels = new ArrayList<String>();
+            for (int i : seq) {
+                levels.add("Level " + i);
+            }
+            ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.row_layout, R.id.textView, levels);
+            setListAdapter(adapter);
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (app.lastChosenPackIndex != app.curPackIndex){
+            finish();
+            startActivity(getIntent());
         }
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.row_layout, R.id.textView, levels);
-        setListAdapter(adapter);
     }
 
     List<Integer> makeSequence(int begin, int end) {

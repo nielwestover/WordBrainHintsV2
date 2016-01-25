@@ -2,6 +2,7 @@ package com.example.a2558.myapplication;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.Context;
 
 import com.google.ads.AdRequest;
 
@@ -18,6 +19,17 @@ import java.util.List;
  * Created by a2558 on 1/11/2016.
  */
 public class MyApplication extends Application {
+    private static Context context;
+
+    public void onCreate() {
+        super.onCreate();
+        MyApplication.context = getApplicationContext();
+    }
+
+    public static Context getAppContext() {
+        return MyApplication.context;
+    }
+
     public static com.google.android.gms.ads.AdRequest adRequest = null;
 
     public static com.google.android.gms.ads.AdRequest getAdRequest() {
@@ -32,21 +44,34 @@ public class MyApplication extends Application {
         return adRequest;
     }
 
-    public static List<AnimalPack> animalPacks = new ArrayList<AnimalPack>();
+    private static List<AnimalPack> animalPacks = new ArrayList<AnimalPack>();
+
+    public static List<AnimalPack> animalPacks() {
+        if (animalPacks == null || animalPacks.size()==0) {
+            try {
+                loadAllLevels();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return animalPacks;
+    }
+
     public static int curPackIndex;
     public static int curLevelInPack;
     public static AnimalPack curAnimalPack;
 
     public static int lastChosenPackIndex;
 
-    public static void loadAllLevels(Activity act) throws IOException {
-        InputStream is = act.getResources().openRawResource(R.raw.all_levels);
+    private static void loadAllLevels() throws IOException {
+        InputStream is = context.getResources().openRawResource(R.raw.all_levels);
         byte[] buf = new byte[is.available()];
         is.read(buf);
         is.close();
         String levels = new String(buf, "UTF-8");
         try {
             JSONArray animalPacksJSON = new JSONArray(levels);
+
             for (int i = 0; i < animalPacksJSON.length(); ++i) {
                 AnimalPack pack = new AnimalPack();
                 JSONObject obj = animalPacksJSON.getJSONObject(i);
