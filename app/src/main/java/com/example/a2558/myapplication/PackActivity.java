@@ -35,7 +35,7 @@ public class PackActivity extends ListActivity {
             for (int i : seq) {
                 levels.add("Level " + i);
             }
-            ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.row_layout, R.id.textView, levels);
+            ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.listview_layout, R.id.textView, levels);
             setListAdapter(adapter);
 
     }

@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class CustomAdapter extends ArrayAdapter<Answer> {
@@ -16,23 +17,33 @@ public class CustomAdapter extends ArrayAdapter<Answer> {
         super(context, 0, users);
      }
 
+    static class ViewHolder {
+        public SingleWordView singleWordView;
+        public Button button;
+    }
+
      @Override
      public View getView(int position, View convertView, final ViewGroup parent) {
+         View rowView = convertView;
         // Get the data item for this position
-        Answer a = getItem(position);
+        ViewHolder viewHolder = null;
         // Check if an existing view is being reused, otherwise inflate the view
-        if (convertView == null) {
-           convertView = LayoutInflater.from(getContext()).inflate(R.layout.single_word_with_button, parent, false);
+        if (rowView == null) {
+           rowView = LayoutInflater.from(getContext()).inflate(R.layout.single_word_with_button, parent, false);
+            viewHolder = new ViewHolder();
+            viewHolder.singleWordView = (SingleWordView) rowView.findViewById(R.id.wordView);
+            viewHolder.button = (Button) rowView.findViewById(R.id.getHint);
+            rowView.setTag(viewHolder);
         }
-        // Lookup view for data population
-        //TextView tvAnswer = (TextView) convertView.findViewById(R.id.answerText);
-        //tvAnswer.setText(a.answer);
-         SingleWordView wv = (SingleWordView) convertView.findViewById(R.id.wordView);
-         wv.setAnswer(a.answer);
-         Button b = (Button) convertView.findViewById(R.id.getHint);
-         b.setOnClickListener(new MyOnClickListener(wv));
-         //wv.
-        // Return the completed view to render on screen
-        return convertView;
+         else{
+            viewHolder=(ViewHolder)rowView.getTag();
+        }
+
+         Answer a = getItem(position);
+
+         viewHolder.singleWordView.setAnswer(a.answer);
+         viewHolder.button.setOnClickListener(new MyOnClickListener(viewHolder.singleWordView));
+
+        return rowView;
     }
 }

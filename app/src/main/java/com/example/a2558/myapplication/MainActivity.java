@@ -38,7 +38,7 @@ public class MainActivity extends Activity {
         app = ((MyApplication) this.getApplication());
 
         ListView listView = (ListView) findViewById(R.id.animalList);
-        ArrayAdapter<AnimalPack> adapter = new ArrayAdapter<AnimalPack>(this, R.layout.row_layout, R.id.textView, app.animalPacks());
+        ArrayAdapter<AnimalPack> adapter = new ArrayAdapter<AnimalPack>(this, R.layout.listview_layout, R.id.textView, app.animalPacks());
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
