@@ -1,10 +1,7 @@
-package com.example.a2558.myapplication;
+package com.afterglowapps.wordbrainhints.v1;
 
-import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
-
-import com.google.ads.AdRequest;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -44,6 +41,10 @@ public class MyApplication extends Application {
         return adRequest;
     }
 
+    public static boolean isPro() {
+        return context.getPackageName().equals("com.afterglowapps.wordbrainhints.v1.pro");
+    }
+
     private static List<AnimalPack> animalPacks = new ArrayList<AnimalPack>();
 
     public static List<AnimalPack> animalPacks() {
@@ -57,9 +58,20 @@ public class MyApplication extends Application {
         return animalPacks;
     }
 
-    public static int curPackIndex;
+    public static AnimalPack getCurAnimalPack(){
+        if (curAnimalPack == null)
+        {
+            curAnimalPack = animalPacks().get(curPackIndex);
+        }
+        return curAnimalPack;
+    }
+    public static void setCurAnimalPack(AnimalPack cur){
+        curAnimalPack = cur;
+    }
+
+    public static int curPackIndex = 0;
     public static int curLevelInPack;
-    public static AnimalPack curAnimalPack;
+    private static AnimalPack curAnimalPack;
 
     public static int lastChosenPackIndex;
 

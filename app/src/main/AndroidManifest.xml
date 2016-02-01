@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.a2558.myapplication" >
+    package="com.afterglowapps.wordbrainhints.v1" >
 
     <application
-        android:name="MyApplication"
+        android:name="com.afterglowapps.wordbrainhints.v1.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name=".MainActivity" >
+        <activity android:name="com.afterglowapps.wordbrainhints.v1.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,18 +17,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PackActivity"
-            android:parentActivityName=".MainActivity">
+            android:name="com.afterglowapps.wordbrainhints.v1.PackActivity"
+            android:parentActivityName="com.afterglowapps.wordbrainhints.v1.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.afterglowapps.wordbrainhints.v1.MainActivity" />
         </activity>
         <activity
-            android:name=".HintsActivity"
-            android:parentActivityName=".PackActivity">
+            android:name="com.afterglowapps.wordbrainhints.v1.HintsActivity"
+            android:parentActivityName="com.afterglowapps.wordbrainhints.v1.PackActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".PackActivity" />
+                android:value="com.afterglowapps.wordbrainhints.v1.PackActivity" />
         </activity>
     </application>
 

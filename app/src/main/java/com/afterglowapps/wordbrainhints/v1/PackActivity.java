@@ -1,4 +1,4 @@
-package com.example.a2558.myapplication;
+package com.afterglowapps.wordbrainhints.v1;
 
 import android.app.ListActivity;
 import android.content.Intent;
@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +29,7 @@ public class PackActivity extends ListActivity {
         Intent intent = getIntent();
         //List<Integer> listValues = new ArrayList<Integer>();
 
-            List<Integer> seq = makeSequence(0, app.curAnimalPack.answers.size() - 1);
+            List<Integer> seq = makeSequence(0, app.getCurAnimalPack().answers.size() - 1);
             List<String> levels = new ArrayList<String>();
             for (int i : seq) {
                 levels.add("Level " + i);

@@ -1,4 +1,4 @@
-package com.example.a2558.myapplication;
+package com.afterglowapps.wordbrainhints.v1;
 
 import android.content.Context;
 import android.content.res.Resources;

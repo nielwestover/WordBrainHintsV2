@@ -12,5 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
+        android:divider="#4e4e4e"
+        android:dividerHeight="1dp"
         android:layout_alignParentStart="true" />
 </RelativeLayout>

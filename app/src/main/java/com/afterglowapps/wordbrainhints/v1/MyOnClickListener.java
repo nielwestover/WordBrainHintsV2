@@ -1,4 +1,4 @@
-package com.example.a2558.myapplication;
+package com.afterglowapps.wordbrainhints.v1;
 
 import android.view.View;
 
@@ -7,7 +7,7 @@ import android.view.View;
  */
 public class MyOnClickListener implements View.OnClickListener
 {
-    SingleWordView wv;
+    private SingleWordView wv;
     public MyOnClickListener(SingleWordView wv) {
         this.wv = wv;
     }
